@@ -6,6 +6,8 @@ Car.prototype.logName = function() {
     console.log(this.name);
 };
 
+const str = 'Hello Alex';
 
-module.exports.carClass = Car;
-//global.Car = Car;
+module.exports = {
+    str: str
+}

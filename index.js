@@ -1,3 +1,5 @@
+
+const obj = require('./class');
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
@@ -14,6 +16,11 @@ server.on('request', (req,res) =>{
 });
 
 
+server.on('connection', () => {
+    console.log('Connection Established');
+});
+
+
 function getPageNameByUrl(path) {
     switch(path) {
         case '/':
@@ -27,3 +34,5 @@ function getPageNameByUrl(path) {
             return 'error';
     }
 }
+
+
